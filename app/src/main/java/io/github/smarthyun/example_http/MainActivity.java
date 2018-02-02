@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
         BtnPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                WeakReference<Context> myWeakCOntext = new WeakReference<>(getApplicationContext());
-                KakaoApi kakaoApi = new KakaoApi(myWeakCOntext);
+                WeakReference<Context> weakReference = new WeakReference<>(getApplicationContext());
+                KakaoApi kakaoApi = new KakaoApi(weakReference);
                 final String body = "{\n" +
                         "    \"msg_id\": \"00000\",\n" +
                         "    \"send_time\": \"\",\n" +
